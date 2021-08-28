@@ -1,0 +1,141 @@
+#particles-js {
+    z-index: -1;
+    position: fixed;
+    top: calc(100vh /2);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: up 0.2s 0.1s backwards;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 4rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.container {
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    background-color: rgba(0, 0, 255, 0.342);
+    position: absolute;
+    top: 0;
+    border: 0;
+    cursor: pointer;
+    margin: 0 1rem ;
+    padding: .7rem 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    z-index: 2;
+    transition: .2s;
+    top: 50%;
+    width: 50px;
+    border-radius: 2px;
+}
+
+button:hover {
+    filter: brightness(.95);
+}
+
+button:last-child {
+    right: 0;
+}
+
+.slideContainer {
+    height: 100%;
+    display: flex;
+    transition: .5s;
+}
+
+.slide {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    
+
+    gap: 2rem;
+}
+
+.slide div {
+    max-width: 400px;
+}
+
+.slide div h1 {
+    font-size: 5rem;
+}
+
+.slide  img {
+    max-height: 400px;
+    height: 100%;
+    animation: up 0.4s 0.2s backwards;
+}
+
+.slidLabelContainer {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+.slidLabelContainer li {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.slidLabelContainer li.active {
+    width: 20px;
+    height: 10px;
+    background-color: #fff;
+}
+
+
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+body {
+    background-color: rgb(19, 19, 59);
+    color: white;
+}
